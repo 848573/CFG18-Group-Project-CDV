@@ -62,13 +62,13 @@ body {
   transition: .9s ease;
 
 }
-.container:hover .overlay {
+.tile:hover .overlay {
   opacity: 0.9;
 }
-.container:hover .image {
+.tile:hover .image {
   opacity: 0.4;
 }
-.container:hover .text {
+.tile:hover .text {
   color: black;
   font-family: 'Josefin+Sans', sans-serif;
   font-weight: 300;
