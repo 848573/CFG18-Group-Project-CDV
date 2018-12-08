@@ -46,19 +46,16 @@
 
 
 
-        <form action='/quiz' method='POST'>
-        
-
-            <ol>
-                {% for i in q %}
-                    <li>Where is <u>{{i}}</u> located?</li>
-                    {% for j in o[i] %}
-                        <input type='radio' value='{{j}}' name='{{i}}' />{{j}}
-                    {% endfor %}
-                {% endfor %}
-            </ol>
-            <input type="submit" value="submit" />
-        </form>
+        <form action="/hom" method="POST">
+        <fieldset>
+            <legend>Login Details</legend>
+            <label for="user_id">Player ID</label><input type="text" id="user_id" name="user_id">
+            <br>
+            Use an integer as the player id
+            <br>
+            <input type="submit">
+        </fieldset>
+    </form>
       {% endif %}
 
 

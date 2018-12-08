@@ -1,6 +1,6 @@
 import requests
 from flask import Flask, render_template, request
-from movies import Movies
+from quiz import Quiz
 
 
 
@@ -28,10 +28,14 @@ def main():
 def map():
     return render_template("map.html")
 
+@app.route("/quiz")
+    def contact():
+        return render_template("quiz.html")
 
 @app.route("/contact")
 def contact():
     return render_template("template.html")
+
 
 @app.route("/contact", methods=["POST"])
 def sign_up():
