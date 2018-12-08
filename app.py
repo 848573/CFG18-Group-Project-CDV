@@ -1,7 +1,6 @@
 import requests
 from flask import Flask, render_template, request
-from quiz import Quiz
-
+from quiz import __name__
 
 
 def send_simple_message(email,name,message):
@@ -29,7 +28,7 @@ def map():
     return render_template("map.html")
 
 @app.route("/quiz")
-    def contact():
+def quiz():
         return render_template("quiz.html")
 
 @app.route("/contact")
