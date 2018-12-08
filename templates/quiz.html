@@ -24,44 +24,55 @@
     </div>
 <!-- /nav bar -->
   </header>
-  <h2=class 'titleinvisible'>CONTACT US</h2>
-<!--  form -->
-<div class="container">
-  <div style="text-align:center">
-    <h3 id='about-title'>ABOUT US</h3>
-  </div>
-  <div class="row">
-    <div class="column">
-      <img class="img-responsive" src='static/images/3.jpg' style="width:95%;height:95%;padding-bottom:50px;">
+  <h2=class 'titleinvisible'>QUIZ</h2>
+
+  <!--  quiz -->
+  <div class="container">
+    <div style="text-align:center">
+      <h3 id='about-title'>What Kind of Coffee Are You?</h3>
     </div>
-    <div class="column">
-      <p id='quote'>"Life is too short for bad coffee."</p>
-      <p id='us'> We are believe that coffee should be enjoyed in peace. While LSE has its own
-        array of cafes, more often than not we want to escape the campus and savour our cup of coffee (or hot chocolate
-        or tea!) somewhere else. Luckily there are no lack of good options within walking distance from campus,
-        and this page lists some of our favorites. Want to people watch, study, hang out, eat and drink, or all
-        above? We got you covered! </p>
-    {% if submit %}
-        <p> Thank you for leaving your message! </p>
-    {% else %}
-      <p id='suggestion'>Love coffee as well? Want to share your favourites? Leave us a message!</p>
-        <form method="post" action="/contact">
+    <div class="row">
+
+      <div class="column">
+        <p id='quote'>Americano? Latte? Espresso?</p>
+        <p id='us'> Are you a bold coffee or something light and frothy? Out of a maze full of coffee types,
+           we have selected a few that would perfectly match your unique personality traits.
+           Discover the coffee type that is closest to your personality or change your preference to relish the drink to the hilt!
+            So if you’re still struggling between a wide variety of coffee drinks at your favorite cafe, then you need not struggle anymore.  </p>
+      {% if submit %}
+          <p> Thank you for leaving your message! </p>
+      {% else %}
+        <p id='suggestion'>Go find out which type of coffee you are!</p>
 
 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name...">
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Your email adress...">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Recommendations, comments, love letters..." style="height:170px"></textarea>
-        <input type="submit" value="Send">
-      </form>
-    {% endif %}
+
+        <form action='/quiz' method='POST'>
+        
+
+            <ol>
+                {% for i in q %}
+                    <li>Where is <u>{{i}}</u> located?</li>
+                    {% for j in o[i] %}
+                        <input type='radio' value='{{j}}' name='{{i}}' />{{j}}
+                    {% endfor %}
+                {% endfor %}
+            </ol>
+            <input type="submit" value="submit" />
+        </form>
+      {% endif %}
+
+
+      </div>
+      <div class="column">
+        <img class="img-responsive" src='static/images/8.jpg' style="width:95%;height:95%;padding-bottom:50px;">
+      </div>
     </div>
   </div>
-</div>
-<!-- /form -->
-<!-- footer -->
+
+
+
+<!-- /footer -->
+
 <footer>
   <p id='footertext'>CONNECT WITH US</p>
   <a href="https://www.facebook.com/"><span class="hb hb-xs spin-icon inv"><i class="fa fa-facebook"></i></span></a>
