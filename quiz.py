@@ -30,7 +30,7 @@ def shuffle(q):
    i = i+1
  return selected_keys
 
-@app.route('/')
+@app.route('/quiz')
 def quiz():
  questions_shuffled = shuffle(questions)
  for i in questions.keys():
