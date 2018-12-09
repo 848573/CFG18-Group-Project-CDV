@@ -14,13 +14,13 @@ def send_simple_message(email,name,message):
 
 app=Flask("MyApp")
 
+@app.route("/")
+def main():
+    return render_template("index.html")
+
 @app.route("/home")
 def home():
     return render_template("home.html")
-
-@app.route("/main")
-def main():
-    return render_template("index.html")
 
 @app.route("/map")
 def map():
