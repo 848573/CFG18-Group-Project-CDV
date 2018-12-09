@@ -4,7 +4,6 @@ from quiz import __name__
 
 
 def send_simple_message(email,name,message):
-    Movies().hello()
     return requests.post(
         "https://api.mailgun.net/v3/sandbox515f39ea45664e09b7b8d02ed3252ef9.mailgun.org/messages",
         auth=("api", "f8087779b7c72082836d7e054f471932-1053eade-e03e11e7"),
