@@ -17,9 +17,9 @@ def quiz_answers():
     if answer == 'cappuccino':
         return render_template("cappucino.html")
     if answer == 'latte':
-            return render_template("latte.html")
+        return render_template("latte.html")
     if answer == 'espresso':
-                    return render_template("espresso.html")
+        return render_template("espresso.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
