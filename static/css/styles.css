@@ -4,6 +4,12 @@ body {
   background-color: #fcf6ef;
   text-align: center;
 }
+br
+{   content: "A" !important;
+    display: block !important;
+    margin-bottom: 1.5em !important;
+}
+
 #navbar {
   overflow: hidden;
   background-color: #333;
@@ -202,6 +208,8 @@ footer {
  * {
      box-sizing: border-box;
  }
+
+
  input[type=text], select, textarea {
      width: 100%;
      padding: 12px;
@@ -272,6 +280,9 @@ input[type=submit]:hover {
   font-weight: 300;
   letter-spacing: 2px;
 }
+
+
+
  .column {
      float: left;
      width: 50%;
