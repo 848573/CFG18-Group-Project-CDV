@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request
 import random, copy
+from __main__ import app
 
-
-app = Flask(__name__)
 @app.route('/quiz')
 def quiz():
     return render_template('quiz.html')
